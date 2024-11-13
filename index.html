@@ -5,84 +5,139 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Бюро переводов "Проф Лингва"</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
+        /* Общие стили */
+        * {
+            box-sizing: border-box;
             margin: 0;
             padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #d1d1d1;
             color: #333;
         }
+
+        /* Стили навигационной панели */
         .header {
             background-color: #3b3b3b;
             color: #fff;
-            padding: 15px 0;
+            width: 100%;
             text-align: center;
+            padding: 15px 0;
         }
         .header nav {
             display: flex;
             justify-content: center;
-            gap: 20px;
+            gap: 40px;
         }
         .header nav a {
             color: #fff;
             text-decoration: none;
             font-weight: bold;
+            font-size: 18px;
         }
+
+        /* Основной контейнер */
         .container {
             display: flex;
-            flex-wrap: wrap;
-            padding: 20px;
-            background-color: #e6e6e6;
-            justify-content: center;
-        }
-        .content {
-            max-width: 600px;
-            text-align: center;
+            max-width: 900px;
             background-color: #444;
             color: #fff;
+            margin: 20px auto;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        /* Левая секция с текстом */
+        .left-section {
+            flex: 1;
             padding: 20px;
-            border-radius: 8px;
-            margin: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
         }
-        .content img {
+        .left-section h1 {
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+        .left-section ul {
+            list-style: none;
+            margin-top: 10px;
+            line-height: 1.8;
+        }
+
+        /* Правая секция с изображением и кнопкой */
+        .right-section {
+            flex: 1;
+            background-color: #333;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            padding: 20px;
+        }
+        .right-section img {
             width: 100%;
+            height: auto;
             border-radius: 8px;
-        }
-        .content h1 {
-            margin-top: 0;
+            opacity: 0.7;
         }
         .order-btn {
-            display: inline-block;
-            margin-top: 15px;
-            padding: 10px 20px;
+            position: absolute;
             background-color: #f4e4ca;
             color: #333;
-            text-decoration: none;
+            padding: 10px 20px;
             font-weight: bold;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
+            text-align: center;
+            font-size: 18px;
+            border-radius: 8px;
+            text-decoration: none;
+            top: 50%;
+            transform: translateY(-50%);
         }
-        .order-btn:hover {
-            background-color: #e0cbb2;
-        }
-        .footer {
-            background-color: #d1d1d1;
+
+        /* Секция контактов */
+        .contact-info {
+            background-color: #e6e6e6;
+            width: 100%;
             padding: 20px;
             text-align: center;
+            color: #333;
         }
-        .footer p {
+        .contact-info h2 {
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+        .contact-info p {
             margin: 5px 0;
         }
-        .footer a {
-            color: #333;
-            text-decoration: none;
-        }
+
+        /* Стили для социальных сетей */
         .social {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            margin-top: 10px;
+            margin-top: 15px;
+            font-weight: bold;
         }
         .social a {
+            color: #333;
+            text-decoration: none;
+            display: block;
+            margin: 5px 0;
+        }
+
+        /* Футер */
+        .footer {
+            background-color: #d1d1d1;
+            padding: 15px;
+            text-align: center;
+            font-size: 14px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .footer a {
             color: #333;
             text-decoration: none;
         }
@@ -90,37 +145,54 @@
 </head>
 <body>
 
+    <!-- Навигационная панель -->
     <div class="header">
         <nav>
-            <a href="#services">Услуги</a>
-            <a href="#prices">Цены</a>
-            <a href="#about">О переводчике</a>
-            <a href="#contacts">Контакты</a>
+            <a href="#services">УСЛУГИ</a>
+            <a href="#prices">ЦЕНЫ</a>
+            <a href="#about">О ПЕРЕВОДЧИКЕ</a>
+            <a href="#contacts">КОНТАКТЫ</a>
         </nav>
     </div>
 
+    <!-- Основной контент -->
     <div class="container">
-        <div class="content">
-            <h1>Бюро переводов "Проф Лингва"</h1>
-            <p>• Переводы текстов<br>• Устные переводы<br>• Нотариальные переводы</p>
-            <a href="#" class="order-btn">ЗАКАЗАТЬ ПЕРЕВОД</a>
+        <!-- Левая часть с информацией -->
+        <div class="left-section">
+            <h1>Бюро переводов<br>"Проф Лингва"</h1>
+            <ul>
+                <li>Переводы текстов</li>
+                <li>Устные переводы</li>
+                <li>Нотариальные переводы</li>
+            </ul>
         </div>
 
-        <div class="content">
-            <h2>Контакты</h2>
-            <p>Телефон: +7(800) 943 46 28</p>
-            <p>E-mail: <a href="mailto:linguatranslate@gmail.com">linguatranslate@gmail.com</a></p>
-            <p>Адрес: Йошкар-Ола, ул. Кремлевская 44</p>
-            <h3>Соц. сети</h3>
-            <div class="social">
-                <a href="https://instagram.com/buroperevodov">Instagram: @buroperevodov</a>
-                <a href="https://vk.com/buroperevodov">VK: @buroperevodov</a>
-            </div>
+        <!-- Правая часть с изображением и кнопкой -->
+        <div class="right-section">
+            <img src="translator.jpg" alt="Переводчик">
+            <a href="#" class="order-btn">ЗАКАЗАТЬ ПЕРЕВОД</a>
         </div>
     </div>
 
+    <!-- Контактная информация -->
+    <div class="contact-info">
+        <h2>Бюро переводов</h2>
+        <p>Телефон: +7(800) 943 46 28</p>
+        <p>E-mail: <a href="mailto:linguatranslate@gmail.com">linguatranslate@gmail.com</a></p>
+        <p>Адрес: Йошкар-Ола, ул. Кремлевская 44</p>
+        <div class="social">
+            <p>Соц. сети</p>
+            <a href="https://instagram.com/buroperevodov">Instagram: @buroperevodov</a>
+            <a href="https://vk.com/buroperevodov">VK: @buroperevodov</a>
+        </div>
+    </div>
+
+    <!-- Футер -->
     <div class="footer">
-        <p><a href="#privacy">Политика конфиденциальности</a> | <a href="#terms">Пользовательское соглашение</a> | <a href="#reviews">Отзывы</a> | <a href="#about">О компании</a></p>
+        <a href="#privacy">Политика конфиденциальности</a>
+        <a href="#terms">Пользовательское соглашение</a>
+        <a href="#reviews">Отзывы</a>
+        <a href="#about">О компании</a>
     </div>
 
 </body>
