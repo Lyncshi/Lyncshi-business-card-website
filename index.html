@@ -3,197 +3,171 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Бюро переводов "Проф Лингва"</title>
+    <meta name="description" content="Услуги профессионального переводчика: письменные и устные переводы, локализация текстов, языковая поддержка.">
+    <meta name="keywords" content="переводчик, услуги перевода, локализация, письменный перевод, устный перевод">
+    <meta name="author" content="Зыкова Виктория">
+    <title>Зыкова Виктория | Переводчик</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        /* Общие стили */
-        * {
-            box-sizing: border-box;
+        body {
+            font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
-            font-family: Arial, sans-serif;
-        }
-        body {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            background-color: #d1d1d1;
             color: #333;
         }
-
-        /* Стили навигационной панели */
-        .header {
-            background-color: #3b3b3b;
+        header {
+            background: #0078D7;
             color: #fff;
-            width: 100%;
+            padding: 20px 15px;
             text-align: center;
-            padding: 15px 0;
         }
-        .header nav {
-            display: flex;
-            justify-content: center;
-            gap: 40px;
+        header h1 {
+            margin: 0;
+            font-size: 2rem;
         }
-        .header nav a {
-            color: #fff;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 18px;
-        }
-
-        /* Основной контейнер */
-        .container {
-            display: flex;
-            max-width: 900px;
-            background-color: #444;
-            color: #fff;
-            margin: 20px auto;
-            border-radius: 8px;
-            overflow: hidden;
-        }
-
-        /* Левая секция с текстом */
-        .left-section {
-            flex: 1;
-            padding: 20px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-        .left-section h1 {
-            font-size: 24px;
-            margin-bottom: 15px;
-        }
-        .left-section ul {
-            list-style: none;
+        nav {
             margin-top: 10px;
-            line-height: 1.8;
         }
-
-        /* Правая секция с изображением и кнопкой */
-        .right-section {
-            flex: 1;
-            background-color: #333;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        section {
+            padding: 40px 15px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        section h2 {
+            color: #0078D7;
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+        }
+        footer {
+            background: #f4f4f4;
+            color: #555;
+            text-align: center;
             padding: 20px;
+            font-size: 0.9rem;
         }
-        .right-section img {
-            width: 100%;
-            height: auto;
-            border-radius: 8px;
-            opacity: 0.7;
-        }
-        .order-btn {
-            position: absolute;
-            background-color: #f4e4ca;
-            color: #333;
+        .button {
+            display: inline-block;
+            background: #0078D7;
+            color: #fff;
             padding: 10px 20px;
-            font-weight: bold;
-            text-align: center;
-            font-size: 18px;
-            border-radius: 8px;
             text-decoration: none;
-            top: 50%;
-            transform: translateY(-50%);
-        }
-
-        /* Секция контактов */
-        .contact-info {
-            background-color: #e6e6e6;
-            width: 100%;
-            padding: 20px;
-            text-align: center;
-            color: #333;
-        }
-        .contact-info h2 {
-            font-size: 22px;
-            margin-bottom: 10px;
-        }
-        .contact-info p {
-            margin: 5px 0;
-        }
-
-        /* Стили для социальных сетей */
-        .social {
+            font-size: 1rem;
+            border-radius: 5px;
             margin-top: 15px;
-            font-weight: bold;
         }
-        .social a {
-            color: #333;
-            text-decoration: none;
-            display: block;
-            margin: 5px 0;
+        .button:hover {
+            background: #005BB5;
         }
-
-        /* Футер */
-        .footer {
-            background-color: #d1d1d1;
-            padding: 15px;
-            text-align: center;
-            font-size: 14px;
+        form {
             display: flex;
-            justify-content: center;
-            gap: 20px;
+            flex-direction: column;
+            gap: 10px;
         }
-        .footer a {
-            color: #333;
-            text-decoration: none;
+        form input, form textarea {
+            padding: 10px;
+            font-size: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        form textarea {
+            resize: none;
+            height: 100px;
+        }
+        form button {
+            background: #0078D7;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+        form button:hover {
+            background: #005BB5;
+        }
+        .map {
+            margin-top: 30px;
+            height: 300px;
+        }
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 1.5rem;
+            }
+            section {
+                padding: 20px;
+            }
         }
     </style>
 </head>
 <body>
 
-    <!-- Навигационная панель -->
-    <div class="header">
-        <nav>
-            <a href="#services">УСЛУГИ</a>
-            <a href="#prices">ЦЕНЫ</a>
-            <a href="#about">О ПЕРЕВОДЧИКЕ</a>
-            <a href="#contacts">КОНТАКТЫ</a>
-        </nav>
-    </div>
+<header>
+    <h1>Зыкова Виктория</h1>
+    <nav>
+        <a href="#about">Обо мне</a>
+        <a href="#services">Услуги</a>
+        <a href="#contact">Контакты</a>
+    </nav>
+</header>
 
-    <!-- Основной контент -->
-    <div class="container">
-        <!-- Левая часть с информацией -->
-        <div class="left-section">
-            <h1>Бюро переводов<br>"Проф Лингва"</h1>
-            <ul>
-                <li>Переводы текстов</li>
-                <li>Устные переводы</li>
-                <li>Нотариальные переводы</li>
-            </ul>
-        </div>
+<section id="about">
+    <h2>Обо мне</h2>
+    <p>Здравствуйте! Меня зовут Зыкова Виктория, я профессиональный переводчик с более чем 5-летним опытом работы. Моя специализация — письменный и устный перевод с французского на русский и обратно. Также я занимаюсь локализацией текстов и языковой поддержкой для бизнеса.</p>
+    <a href="#contact" class="button">Связаться</a>
+</section>
 
-        <!-- Правая часть с изображением и кнопкой -->
-        <div class="right-section">
-            <img src="translator.jpg" alt="Переводчик">
-            <a href="#" class="order-btn">ЗАКАЗАТЬ ПЕРЕВОД</a>
-        </div>
-    </div>
+<section id="services">
+    <h2>Услуги</h2>
+    <ul>
+        <li>Письменный перевод: техническая, художественная и бизнес-документация.</li>
+        <li>Устный перевод: синхронный и последовательный.</li>
+        <li>Локализация: адаптация сайтов и приложений для русского или французского рынка.</li>
+        <li>Редактирование и корректура переводов.</li>
+    </ul>
+    <a href="#contact" class="button">Узнать больше</a>
+</section>
 
-    <!-- Контактная информация -->
-    <div class="contact-info">
-        <h2>Бюро переводов</h2>
-        <p>Телефон: +7(800) 943 46 28</p>
-        <p>E-mail: <a href="mailto:linguatranslate@gmail.com">linguatranslate@gmail.com</a></p>
-        <p>Адрес: Йошкар-Ола, ул. Кремлевская 44</p>
-        <div class="social">
-            <p>Соц. сети</p>
-            <a href="https://instagram.com/buroperevodov">Instagram: @buroperevodov</a>
-            <a href="https://vk.com/buroperevodov">VK: @buroperevodov</a>
-        </div>
-    </div>
+<section id="contact">
+    <h2>Контакты</h2>
+    <p>Для заказа услуг или уточнения информации заполните форму ниже:</p>
 
-    <!-- Футер -->
-    <div class="footer">
-        <a href="#privacy">Политика конфиденциальности</a>
-        <a href="#terms">Пользовательское соглашение</a>
-        <a href="#reviews">Отзывы</a>
-        <a href="#about">О компании</a>
+    <!-- Форма обратной связи -->
+    <form action="https://example.com/submit" method="POST">
+        <input type="text" name="name" placeholder="Ваше имя" required>
+        <input type="email" name="email" placeholder="Ваш email" required>
+        <textarea name="message" placeholder="Ваше сообщение" required></textarea>
+        <button type="submit">Отправить</button>
+    </form>
+
+    <!-- Google Maps -->
+    <h3>Где я нахожусь?</h3>
+    <div class="map">
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.8354345095875!2d144.9537353153183!3d-37.81720997975148!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf577f9b2b2b2c78a!2sMelbourne%20Central!5e0!3m2!1sen!2sau!4v1618200548198!5m2!1sen!2sau" 
+            width="100%" 
+            height="100%" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy">
+        </iframe>
     </div>
+    <p><strong>Email:</strong> <a href="mailto:lyncshi@gmail.com">lyncshi@gmail.com</a></p>
+</section>
+
+<footer>
+    &copy; 2024 Зыкова Виктория. Все права защищены.
+</footer>
 
 </body>
 </html>
